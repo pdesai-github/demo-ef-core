@@ -12,18 +12,5 @@ namespace EFCoreDemo
         {
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Category>().HasData(
-                new Category { Id = 1, Name = "Electronics" },
-                new Category { Id = 2, Name = "Clothing" },
-                new Category { Id = 3, Name = "Grocery" }
-            );
-            modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 1, Name = "Laptop", Price = 500, CategoryId = 1 },
-                new Product { Id = 2, Name = "T-Shirt", Price = 10, CategoryId = 2 },
-                new Product { Id = 3, Name = "Rice", Price = 5, CategoryId = 3 }
-            );
-        }
     }
 }
